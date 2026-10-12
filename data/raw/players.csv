@@ -1,0 +1,25 @@
+player_id,name,position,squad_number,academy_team,age
+P001,Leo Vance,Forward,9,Vertex Alpha,18
+P002,Mateo Silva,Forward,11,Vertex Alpha,19
+P003,Kai Brennan,Forward,7,Vertex Beta,17
+P004,Tariq Thorne,Forward,10,Vertex Beta,19
+P005,Darius Cole,Midfielder,8,Vertex Alpha,18
+P006,Ethan Mercer,Midfielder,6,Vertex Alpha,19
+P007,Arjun Rao,Midfielder,14,Vertex Alpha,17
+P008,Nico Alvarez,Midfielder,16,Vertex Alpha,18
+P009,Julian Sterling,Midfielder,8,Vertex Beta,19
+P010,Sami Benali,Midfielder,6,Vertex Beta,18
+P011,Marcus Flynn,Midfielder,15,Vertex Beta,17
+P012,Rohan Patel,Midfielder,20,Vertex Beta,18
+P013,Caleb Ward,Defender,4,Vertex Alpha,19
+P014,Tomas Lindqvist,Defender,5,Vertex Alpha,18
+P015,Zackary O'Connor,Defender,2,Vertex Alpha,17
+P016,Dominik Keller,Defender,3,Vertex Alpha,18
+P017,Victor Hayes,Defender,4,Vertex Beta,19
+P018,Lucas Navarro,Defender,5,Vertex Beta,18
+P019,Adrian Dubois,Defender,2,Vertex Beta,18
+P020,Felix Richter,Defender,3,Vertex Beta,17
+P021,Milan Novak,Goalkeeper,1,Vertex Alpha,19
+P022,Jonas Becker,Goalkeeper,13,Vertex Alpha,17
+P023,Hassan Mansour,Goalkeeper,1,Vertex Beta,18
+P024,Oliver Tremblay,Goalkeeper,12,Vertex Beta,17

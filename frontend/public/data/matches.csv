@@ -1,0 +1,16 @@
+match_id,date,team,opponent,venue,goals_for,goals_against,result
+M01,2026-01-10,Vertex Alpha,Metro Youth FC,Home,3,1,WIN
+M02,2026-01-17,Vertex Alpha,Coastal United Academy,Away,2,2,DRAW
+M03,2026-01-24,Vertex Alpha,Highland Athletic,Home,4,0,WIN
+M04,2026-01-31,Vertex Alpha,Silverstone Rovers,Away,1,2,LOSS
+M05,2026-02-07,Vertex Alpha,Northern Stars Academy,Home,2,1,WIN
+M06,2026-02-14,Vertex Alpha,Apex Elite Youth,Away,3,2,WIN
+M07,2026-02-21,Vertex Alpha,Cascade FC Academy,Home,2,0,WIN
+M08,2026-02-28,Vertex Alpha,Vertex Beta,Neutral,2,2,DRAW
+M09,2026-01-11,Vertex Beta,Summit City Boys,Home,2,0,WIN
+M10,2026-01-18,Vertex Beta,Lakeside Sporting,Away,1,1,DRAW
+M11,2026-01-25,Vertex Beta,Valley Juniors,Home,3,1,WIN
+M12,2026-02-01,Vertex Beta,Metro Youth FC,Away,0,1,LOSS
+M13,2026-02-08,Vertex Beta,Silverstone Rovers,Home,2,1,WIN
+M14,2026-02-15,Vertex Beta,Highland Athletic,Away,4,2,WIN
+M15,2026-02-22,Vertex Beta,Apex Elite Youth,Home,1,0,WIN

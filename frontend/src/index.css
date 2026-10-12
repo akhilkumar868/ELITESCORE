@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Central Theme & Design System Tokens (Translucent surfaces over Silk WebGL background) */
+    --bg-canvas: #02010a;
+    --bg-surface: rgba(11, 13, 30, 0.72);
+    --bg-elevated: rgba(20, 23, 48, 0.78);
+    --bg-muted: rgba(7, 8, 22, 0.68);
+    --border-subtle: rgba(145, 107, 191, 0.18);
+    --border-strong: rgba(145, 107, 191, 0.35);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --accent-primary: #10b981;
+    --accent-primary-hover: #059669;
+    --accent-secondary: #3b82f6;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+
+    /* Shadcn & Wensity Sidebar Primitive Tokens */
+    --background: rgba(0, 0, 0, 0.90);
+    --foreground: #f8fafc;
+    --muted-foreground: #94a3b8;
+    --border: rgba(145, 107, 191, 0.18);
+    --card: rgba(11, 13, 30, 0.82);
+    --primary: #10b981;
+    --primary-foreground: #ffffff;
+    --color-brand: #10b981;
+    --color-brand-foreground: #ffffff;
+    --primitive-radius-item: 0.625rem;
+    --primitive-radius-control-sm: 0.625rem;
+    --primitive-radius-surface: 1rem;
+    --primitive-text-secondary: #94a3b8;
+    --primitive-surface-hover: rgba(255, 255, 255, 0.06);
+    --primitive-surface-selected: rgba(16, 185, 129, 0.15);
+    --primitive-ring: rgba(16, 185, 129, 0.45);
+    --primitive-chart-1: #10b981;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Tabular numerals for all data tables and KPI metrics */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Clean, unobtrusive scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #02010a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Reusable SaaS Surface Utilities */
+@layer components {
+  .saas-card {
+    background-color: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px -2px rgba(2, 1, 10, 0.45);
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .saas-card-interactive {
+    background-color: var(--bg-surface);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px -2px rgba(2, 1, 10, 0.45);
+    transition: border-color 150ms ease, background-color 150ms ease, transform 150ms ease;
+  }
+
+  .saas-card-interactive:hover {
+    border-color: var(--border-strong);
+    background-color: rgba(18, 21, 46, 0.82);
+  }
+
+  .saas-input {
+    background-color: var(--bg-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    transition: border-color 150ms ease, box-shadow 150ms ease;
+  }
+
+  .saas-input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15);
+  }
+
+  /* Player Card / Box Interactive Hover (Turns Dark Blue on Hover, Reverts on Unhover) */
+  .player-card-hover {
+    transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  .player-card-hover:hover {
+    background-color: #1e3a8a !important; /* Rich Dark Blue */
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.35) !important;
+    transform: translateY(-2px);
+  }
+  .player-card-hover:hover h3,
+  .player-card-hover:hover .player-name {
+    color: #ffffff !important;
+  }
+  .player-card-hover:hover p,
+  .player-card-hover:hover .player-meta {
+    color: #bfdbfe !important;
+  }
+  .player-card-hover:hover .player-metrics-box {
+    background-color: rgba(15, 23, 42, 0.75) !important;
+    border-color: rgba(96, 165, 250, 0.3) !important;
+    color: #f8fafc !important;
+  }
+  .player-card-hover:hover .player-metrics-box > div {
+    border-color: rgba(96, 165, 250, 0.2) !important;
+  }
+  .player-card-hover:hover .player-metric-label {
+    color: #93c5fd !important;
+  }
+  .player-card-hover:hover .player-metric-value {
+    color: #ffffff !important;
+  }
+  .player-card-hover:hover .player-metric-score {
+    color: #34d399 !important;
+  }
+  .player-card-hover:hover .player-metric-score-blue {
+    color: #60a5fa !important;
+  }
+  .player-card-hover:hover .player-metric-score-amber {
+    color: #fbbf24 !important;
+  }
+  .player-card-hover:hover .border-t {
+    border-color: rgba(96, 165, 250, 0.25) !important;
+  }
+  .player-card-hover:hover .player-action-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+  }
+  .player-card-hover:hover .player-action-btn:hover {
+    background-color: #1d4ed8 !important;
+    border-color: #60a5fa !important;
+  }
+
+  /* Player Table Row Interactive Hover (Turns Dark Blue on Hover, Reverts on Unhover) */
+  .player-row-hover {
+    transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+  }
+  .player-row-hover:hover {
+    background-color: #1e3a8a !important; /* Rich Dark Blue */
+    color: #ffffff !important;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.4) !important;
+  }
+  .player-row-hover:hover td {
+    color: #f1f5f9 !important;
+  }
+  .player-row-hover:hover .player-name {
+    color: #ffffff !important;
+  }
+  .player-row-hover:hover .player-meta {
+    color: #bfdbfe !important;
+  }
+  .player-row-hover:hover .player-score-badge {
+    background-color: rgba(16, 185, 129, 0.25) !important;
+    color: #34d399 !important;
+    border-color: rgba(16, 185, 129, 0.5) !important;
+  }
+  .player-row-hover:hover .player-stat-value {
+    color: #ffffff !important;
+  }
+  .player-row-hover:hover .player-action-btn {
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #3b82f6 !important;
+  }
+  .player-row-hover:hover .player-action-btn:hover {
+    background-color: #1d4ed8 !important;
+    border-color: #60a5fa !important;
+  }
+}
